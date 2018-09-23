@@ -10,7 +10,7 @@
   我们的Medium: <a href="https://medium.com/@eostoolkitcn">Medium</a>.
 </p>
 <p>
-  请加入我们的: <a href="https://discord.gg/zBHJQA6">Discord</a>.
+  请加入我们的Discord参与讨论: <a href="https://discord.gg/zBHJQA6">Discord</a>.
 </p>
 
 ----
