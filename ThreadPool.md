@@ -45,7 +45,7 @@ val f : Future[String] = Future { “hello world” }
 In this example, the global execution context is used to asynchronously run the created future. As mentioned earlier, the ExecutionContext parameter to the Future is implicit. That means that if the compiler finds an instance of an ExecutionContext in so-called implicit scope, it is automatically passed to the call to Future without the user having to explicitly pass it. In the example above, ec is put into implicit scope through the use of the implicit keyword when declaring ec.
 
 
-在这个例子里: 
+在这个例子里, 
 
 
 As mentioned earlier, futures and promises in Scala are asynchronous, which is achieved through the use of callbacks. For example:
@@ -74,10 +74,14 @@ In this example, we first create a future f, and when it completes, we provide t
 
 So, how does it all work together?
 
+所以它们是如何在一起工作的呢?
 
 
 
 As we mentioned, Futures require an ExecutionContext, which is an implicit parameter to virtually all of the futures API. This ExecutionContext is used to execute the future. Scala is flexible enough to let users implement their own Execution Contexts, but let’s talk about the default ExecutionContext, which is a ForkJoinPool.
+
+Future的使用需要一个ExecutionContext: 一个隐式的上下文包含了所有future的api。
+ExecutionContext用来执行future, Scala
 
 
 
@@ -85,6 +89,10 @@ As we mentioned, Futures require an ExecutionContext, which is an implicit param
 ForkJoinPool is ideal for many small computations that spawn off and then come back together. Scala’s ForkJoinPool requires the tasks submitted to it to be a ForkJoinTask. The tasks submitted to the global ExecutionContext is quietly wrapped inside a ForkJoinTask and then executed. ForkJoinPool also supports a possibly blocking task, using the ManagedBlock method which creates a spare thread if required to ensure that there is sufficient parallelism if the current thread is blocked. To summarize, ForkJoinPool is an really good general purpose ExecutionContext, which works really well in most of the scenarios.
 
 
+ForkJoinPool对很多小型的计算任务(分派出去之后,一同计算完成)是比较理想的。Scala的ForkJoinPool需要计算任务以ForkJoinTask的实例被提交。
+被提交给全局ExecutionContext的任务被封装成一个ForkJoinTask然后被执行。
+ForkJoinPool也提供了一种方式线程阻塞的方式, 通过使用ManagedBlock方法创造一个备用线程保证充分的并行能力。
+总结一下: ForkJoinPool的确是一种优秀的实现方式,可以适用于大部分的场景。
 
  
 
