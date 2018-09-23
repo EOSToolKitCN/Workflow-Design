@@ -78,7 +78,7 @@ finagle和folly都是业内公认比较成熟的异步处理框架, 因为在fac
 
 [1.2ThreadPool: 基于线程池的模式](https://github.com/EOSToolKitCN/Workflow-Design/blob/master/ThreadPool.md)
 
-[1.2ThreadModel: 线程模型](https://github.com/EOSToolKitCN/Workflow-Design/blob/master/ThreadModel.md)
+[1.3ThreadModel: 线程模型](https://github.com/EOSToolKitCN/Workflow-Design/blob/master/ThreadModel.md)
 
 
 <br>
