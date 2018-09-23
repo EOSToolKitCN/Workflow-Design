@@ -108,7 +108,7 @@ Suppose we execute a function, here g() which in turn, calls another function f(
 假设执行一个函数, 如图所示在函数g()中调用函数f()。函数f()返回一个Promise对象, 1000毫秒之后设置promise为true。执行alert(true)还是alert(false)依据返回的promise的值。
 
 
-图1
+[图1](https://raw.githubusercontent.com/EOSToolKitCN/Workflow-Design/master/images/sector1/eventloop/eventloop-1.png)
 
 
 Now, JavaScript’s runtime is single threaded. This statement is true, and not true. The thread which executes the user code is single threaded. It executes what is on top of the stack, runs it to completion, and then moves onto what is next on the stack. But, there are also a number of helper threads which handle things like network or timer/settimeout type events. This timing thread handles the counter for setTimeout.
@@ -117,7 +117,7 @@ Now, JavaScript’s runtime is single threaded. This statement is true, and not 
 目前JavaScript的运行时是单线程的, 运行代码的执行线程也是单线程的, 会从栈顶开始依次执行到栈底。但是还是会有一些辅助线程处理网络/时间等类型的事件。如下图的时间线程处理setTimeout的函数逻辑。
 
 
-图2
+[图2](https://raw.githubusercontent.com/EOSToolKitCN/Workflow-Design/master/images/sector1/eventloop/eventloop-2.png)
 
 
 Once the timer expires, the timer thread puts a message on the message queue. The queued up messages are then handled by the event loop. The event loop as described above, is simply an infinite loop which checks if a message is ready to be processed, picks it up and puts it on the stack for it’s callback to be executed.
@@ -126,7 +126,7 @@ Once the timer expires, the timer thread puts a message on the message queue. Th
 一旦时间过期, timer线程会在消息队列上放一个消息。排队消息随后会被事件循环处理掉。事件循环如上所述: 是一个无限循环检测的装置, 用于一直检测队列中的消息是否满足被执行的条件, 如果满足就把它们放进函数栈中等待被执行。
 
 
-图3
+[图3](https://raw.githubusercontent.com/EOSToolKitCN/Workflow-Design/master/images/sector1/eventloop/eventloop-3.png)
 
 
 Here, since the future is resolved with a value of true, we are alerted with a value true when the callback is picked up for execution.
@@ -134,7 +134,7 @@ Here, since the future is resolved with a value of true, we are alerted with a v
 所以, 一旦future被至为true, 接下来的回调函数alert将会执行。
 
 
-图4
+[图4](https://raw.githubusercontent.com/EOSToolKitCN/Workflow-Design/master/images/sector1/eventloop/eventloop-4.png)
 
 
 We’ve ignored the heap here, but all the functions, variables and callbacks are stored on heap. As we’ve seen here, even though JavaScript is said to be single threaded, there are number of helper threads to help main thread do things like timeout, UI, network operations, file operations etc.
