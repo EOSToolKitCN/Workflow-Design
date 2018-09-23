@@ -1,3 +1,17 @@
+<p>
+  请关注我们的微信公众号: <strong>GENEREOS</strong>
+</p>
+<p>
+  我们的Reddit: <a href="https://www.reddit.com/user/GENEREOS-CN">Reddit</a>.
+</p>
+<p>
+  我们的Medium: <a href="https://medium.com/@eostoolkitcn">Medium</a>.
+</p>
+<p>
+  请加入我们的: <a href="https://discord.gg/zBHJQA6">Discord</a>.
+</p>
+
+
 ### WorkFlow-Design
 
 ```java
@@ -29,12 +43,40 @@ BTC,ETH,EOS等公共区块链网络无法成为商业的一部分的主要原因
 千里之行始于足下。
 ```
 
+----
+
+<br>
 
 ### WorkFlow-Docs
 
 所有设计文档实时更新在本Git, 可以查看md结尾的markdown文件查看。
 
+Workflow Engine是在EOS网络链外协同多方参与机构共识的网络, 自身也是分布式系统的一种。
+Workflow Engine的设计难点在 工作流节点间异步交互的任务处理。
+所以设计从5方面展开, 逐一讨论优化, 也希望大家可以在Discord中参与讨论:
+
+#### 工作流引擎的异步任务处理设计
+
 [EventLoop: 引擎事件驱动设计](https://github.com/EOSToolKitCN/workflow-design/blob/master/EventLoop.md)
+
+
+#### 工作流引擎通信协议设计
+
+//TODO
+
+
+#### 工作流任务的编程界面定义
+
+
+//TODO
+
+#### 工作流任务的编译器设计
+
+//TODO
+
+#### 辅助套件: SDK和CLI的设计
+
+//TODO
 
 
 持续更新......
