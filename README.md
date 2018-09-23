@@ -43,7 +43,7 @@ BTC,ETH,EOS等公共区块链网络无法成为商业的一部分的主要原因
 
 ```java
 基于EOS网络的工作流引擎设计和代码会在GitHub上实时更新: <a href="https://github.com/EOSToolKitCN">GitHub</a>
-如果您认为这是有意义的事情, 请点击左边的按钮捐助我们。
+如果您认为这是有意义的事情, 请登陆 http://eostoolkit.vip 支持我们。
 做为回报我们会空投WORK TOKEN给您。
 千里之行始于足下。
 ```
