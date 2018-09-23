@@ -1,3 +1,5 @@
+### 关于我们
+
 <p>
   请关注我们的微信公众号: <strong>GENEREOS</strong>
 </p>
@@ -11,8 +13,11 @@
   请加入我们的: <a href="https://discord.gg/zBHJQA6">Discord</a>.
 </p>
 
+----
 
-### WorkFlow-Design
+<br>
+
+### 概要说明
 
 ```java
 Block One 最近宣布, 他们将投票给那些给EOS发展带来重要贡献的超级节点, 希望超级节点可以对EOS生态发展持续做出贡献。
@@ -47,34 +52,41 @@ BTC,ETH,EOS等公共区块链网络无法成为商业的一部分的主要原因
 
 <br>
 
-### WorkFlow-Docs
+### Workflow Engine设计汇总
 
 所有设计文档实时更新在本Git, 可以查看md结尾的markdown文件查看。
 
 Workflow Engine是在EOS网络链外协同多方参与机构共识的网络, 自身也是分布式系统的一种。
 Workflow Engine的设计难点在 工作流节点间异步交互的任务处理。
-所以设计从5方面展开, 逐一讨论优化, 也希望大家可以在Discord中参与讨论:
+所以设计从5方面展开, 团队内部逐一讨论优化, 也希望大家可以在Discord中参与讨论:
 
-#### 工作流引擎的异步任务处理设计
+#### 1.工作流引擎的异步任务处理设计
 
-[EventLoop: 引擎事件驱动设计](https://github.com/EOSToolKitCN/workflow-design/blob/master/EventLoop.md)
+异步任务处理有多种实现方式可以选择,我们在Git中也fork了twitter的finagle 和 facebook的folly两个开源项目的代码。
+finagle和folly都是业内公认比较成熟的异步处理框架, 因为在facebook和twitter的实际生产中使用所以稳定性和性能都是毋庸置疑的。
 
-
-#### 工作流引擎通信协议设计
-
-//TODO
+这一节的引擎异步任务处理设计通过: [Future/Promise的设计发展](http://dist-prog-book.com/chapter/2/futures.html) 寻找灵感, 结合finagle和folly的优势, 试图寻找适合EOS网络工作流引擎自己的异步任务处理模式。
 
 
-#### 工作流任务的编程界面定义
+[1.1EventLoop: 基于消息事件驱动的模式](https://github.com/EOSToolKitCN/workflow-design/blob/master/EventLoop.md)
 
 
-//TODO
 
-#### 工作流任务的编译器设计
+#### 2.工作流引擎通信协议设计
 
 //TODO
 
-#### 辅助套件: SDK和CLI的设计
+
+#### 3.工作流任务的编程界面定义
+
+
+//TODO
+
+#### 4.工作流任务的编译器设计
+
+//TODO
+
+#### 5. 辅助套件: SDK和CLI的设计
 
 //TODO
 
@@ -82,5 +94,7 @@ Workflow Engine的设计难点在 工作流节点间异步交互的任务处理�
 持续更新......
 
 ----
+
+<br>
 
 Best Regards
