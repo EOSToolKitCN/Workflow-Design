@@ -4,6 +4,12 @@
   请关注我们的微信公众号: <strong>GENEREOS</strong>
 </p>
 <p>
+  我们的官方网址: <a href="http://eostoolkit.vip">官网主页</a>.
+</p>
+<p>
+  我们的Github: <a href="https://github.com/EOSToolKitCN">Github</a>.
+</p>
+<p>
   我们的Reddit: <a href="https://www.reddit.com/user/GENEREOS-CN">Reddit</a>.
 </p>
 <p>
