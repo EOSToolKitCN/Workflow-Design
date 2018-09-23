@@ -44,11 +44,11 @@ BTC,ETH,EOS等公共区块链网络无法成为商业的一部分的主要原因
 
 ```java
 如果你是Corda R3, Fabric 或者是密码学方面的专家; 如果对工作流引擎的设计和开发非常感兴趣;
-如果对EOS网络的未来充满信息; 请联系我们: - <a href="mailto:eostoolkitcn@gmail.com">eostoolkitcn@gmail.com</a>
+如果对EOS网络的未来充满信息; 请联系我们: - eostoolkitcn@gmail.com
 ```
 
 ```java
-基于EOS网络的工作流引擎设计和代码会在GitHub上实时更新: <a href="https://github.com/EOSToolKitCN">GitHub</a>
+基于EOS网络的工作流引擎设计和代码会在GitHub上实时更新: https://github.com/EOSToolKitCN
 如果您认为这是有意义的事情, 请登陆 http://eostoolkit.vip 支持我们。
 做为回报我们会空投WORK TOKEN给您。
 千里之行始于足下。
@@ -75,6 +75,7 @@ finagle和folly都是业内公认比较成熟的异步处理框架, 因为在fac
 
 
 [1.1EventLoop: 基于消息事件驱动的模式](https://github.com/EOSToolKitCN/workflow-design/blob/master/EventLoop.md)
+
 [1.2ThreadPool: 基于线程池的模式](https://github.com/EOSToolKitCN/Workflow-Design/blob/master/ThreadPool.md)
 
 
