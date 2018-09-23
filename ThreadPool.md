@@ -45,11 +45,17 @@ val f : Future[String] = Future { “hello world” }
 In this example, the global execution context is used to asynchronously run the created future. As mentioned earlier, the ExecutionContext parameter to the Future is implicit. That means that if the compiler finds an instance of an ExecutionContext in so-called implicit scope, it is automatically passed to the call to Future without the user having to explicitly pass it. In the example above, ec is put into implicit scope through the use of the implicit keyword when declaring ec.
 
 
-在这个例子里, 
+
+在这个例子里, 全局的execution context用来被运行初始化好的future。如之前描述ExecutionContext参数是隐式传递的。
+这意味着如果编译器在所谓的隐式区找到了一个ExecutionContext实例会自动运行future而无需用户显式传递它。
+上面的例子中在声明ec的时候通过使用隐式关键字-implicit放入隐式区。
+
 
 
 As mentioned earlier, futures and promises in Scala are asynchronous, which is achieved through the use of callbacks. For example:
 
+如之前所说, future 和 promise 在Scala中是通过回调的方式实现异步的。
+举例如下:
 
 
 ```scala
@@ -66,9 +72,11 @@ f.onComplete {
 ```
 
 
-
 In this example, we first create a future f, and when it completes, we provide two possible expressions that can be invoked depending on whether the future was executed successfully or if there was an error. In this case, if successful, we get the result of the computation an HTTP string, and we print it. If an exception was thrown, we get the message string contained within the exception and we print that.
 
+在这个例子中,我们先创造了一个future f, 当它执行完成之后我们提供了两个后续执行的选择。后续执行哪段逻辑依赖于future是返回成功还是返回错误。
+在这个例子中, 如果返回成功我们就打印http请求的结果。
+如果返回错误也就是在future执行过程中抛出了异常, 我们就打印异常信息。
 
 
 
@@ -81,8 +89,8 @@ So, how does it all work together?
 As we mentioned, Futures require an ExecutionContext, which is an implicit parameter to virtually all of the futures API. This ExecutionContext is used to execute the future. Scala is flexible enough to let users implement their own Execution Contexts, but let’s talk about the default ExecutionContext, which is a ForkJoinPool.
 
 Future的使用需要一个ExecutionContext: 一个隐式的上下文包含了所有future的api。
-ExecutionContext用来执行future, Scala
-
+ExecutionContext用来执行future, Scala留出了足够的扩展性可以让开发者实现ExecutionContext接口完成自己的实现类。
+我们下面聊聊ExecutionContext的默认实现, 也就是通过ForkJoinPool的实现方式。
 
 
 
