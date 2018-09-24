@@ -71,7 +71,7 @@ Workflow Engine的设计难点在 工作流节点间异步交互的任务处理�
 异步任务处理有多种实现方式可以选择,我们在Git中也fork了twitter的finagle 和 facebook的folly两个开源项目的代码。
 finagle和folly都是业内公认比较成熟的异步处理框架, 因为在facebook和twitter的实际生产中使用所以稳定性和性能都是毋庸置疑的。
 
-这一节的引擎异步任务处理设计通过: [Future/Promise的设计发展](http://dist-prog-book.com/chapter/2/futures.html) 寻找灵感, 结合finagle和folly的优势, 试图寻找适合EOS网络工作流引擎自己的异步任务处理模式。
+这一节的引擎异步任务处理设计通过: Future/Promise 寻找灵感, 结合finagle和folly的优势, 试图寻找适合EOS网络工作流引擎自己的异步任务处理模式。
 
 
 [1.1EventLoop: 基于消息事件驱动的模式](https://github.com/EOSToolKitCN/workflow-design/blob/master/EventLoop.md)
