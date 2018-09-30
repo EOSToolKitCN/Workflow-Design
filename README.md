@@ -7,9 +7,6 @@
   我们的Github: <a href="https://github.com/EOSToolKitCN">Github</a>.
 </p>
 <p>
-  我们的Reddit: <a href="https://www.reddit.com/user/GENEREOS-CN">Reddit</a>.
-</p>
-<p>
   我们的Medium: <a href="https://medium.com/@eostoolkitcn">Medium</a>.
 </p>
 <p>
