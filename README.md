@@ -1,9 +1,6 @@
 ### 关于我们
 
 <p>
-  请关注我们的微信公众号: <strong>GENEREOS</strong>
-</p>
-<p>
   我们的官方网址: <a href="http://eostoolkit.vip">官网主页</a>.
 </p>
 <p>
