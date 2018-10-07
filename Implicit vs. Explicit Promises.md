@@ -3,7 +3,14 @@
 
 We define implicit promises as ones where we don’t have to manually trigger the computation vs Explicit promises where we have to trigger the resolution of future manually, either by calling a start function or by requiring the value. This distinction can be understood in terms of what triggers the calculation: With implicit promises, the creation of a promise also triggers the computation, while with explicit futures, one needs to triggers the resolution of a promise. This trigger can in turn be explicit, like calling a start method, or implicit, like lazy evaluation where the first use of a promise’s value triggers its evaluation.
 
+首先定义隐式和显式的Promise, 隐式是不需要手工触发future计算结果的模式, 显式是需要手工触发future计算结果的模式。
+两者的差别可以通过是什么触发了计算来判定: 隐式的promise在创建的时候同时触发计算, 但是显式的需要手动触发。
+
+
 The idea for explicit futures were introduced in the Baker and Hewitt paper. They’re a little trickier to implement, and require some support from the underlying language, and as such they aren’t that common. The Baker and Hewitt paper talked about using futures as placeholders for arguments to a function, which get evaluated in parallel, but when they’re needed. MultiLisp also had a mechanism to delay the evaluation of the future to the time when it’s value is first used, using the defer construct. Lazy futures in Alice ML have a similar explicit invocation mechanism, the first thread touching a future triggers its evaluation.
+
+在Baker和Hewitt的论文里首次介绍了显式future. 
+
 
 An example of explicit futures would be (from AliceML):
 
