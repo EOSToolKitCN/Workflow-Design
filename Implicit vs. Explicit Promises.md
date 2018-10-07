@@ -37,6 +37,8 @@ f onComplete  {
 
 This sends the HTTP call as soon as it the Future is created. In Scala, although the futures are implicit, Promises can be used to have an explicit-like behavior. This is useful in a scenario where we need to stack up some computations and then resolve the Promise.
 
+
+
 ```java
 val p = Promise[Foo]()
 
@@ -46,4 +48,6 @@ p.complete(new Foo)
 ```
 
 Here, we create a Promise, and complete it later. Between creation and completion we stack up a set of computations which then get executed once the promise is completed.
+
+我们创建一个promise然后完成它。在创建和完成之间有一系列计算任务在promise完成之后触发执行。
 
